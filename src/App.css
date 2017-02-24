@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: url("https://s3.us-east-2.amazonaws.com/restaurant.ericbutler.info/Restaurant.JPG");
 }
 
 .App-logo {
@@ -11,22 +12,31 @@
   padding: 20px;
   color: white;
   position: absolute;
-  width: 100%;
-  box-sizing: border-box;
+  width: calc(100vw - 40px);
   height: 100vh;
+  top: 0;
 }
 
 .App-content {
   font-size: large;
   background: white;
-  position: absolute;
   padding: 20px;
-  width: 100%;
+  width: calc(100vw - 40px);
   text-align: center;
-  top: 45px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.App-content i {
+  font-family: cursive;
+}
+
+.slide-in {
+  display: block;
+  text-align: right;
+  padding-right: 7vw;
+  animation: slide-in 1 .5s ease-out 0s;
+}
+
+@keyframes slide-in {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
 }
